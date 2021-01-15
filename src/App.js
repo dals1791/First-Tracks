@@ -1,7 +1,6 @@
 import React from "react"
 import './App.css';
-import Jon from "./Jon"
-import Plants from "./Plants"
+import Weather from "./Weather"
 
 function App() {
   
@@ -9,8 +8,8 @@ function App() {
 return (
   <>
     <div>Hello world</div>
-    <Jon />
-    <Plants/>
+    <Weather />
+    
     </>
  
   );
