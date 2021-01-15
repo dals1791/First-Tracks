@@ -2,9 +2,9 @@
 
 ## Project Description
 
-Deciding on where to ski or snowboard? Mountain Tracker can help!
+<p>Deciding on where to ski or snowboard? Mountain Tracker can help!</p>
 
-Mountain Tracker is an app that allows you to get updates on weather and other information for your go-to ski & snowboard resorts all in one place. 
+<p>Mountain Tracker is an app that allows you to get updates on weather and other information for your go-to ski & snowboard resorts all in one place. </p>
  
 ## API
 
@@ -127,12 +127,78 @@ API Response:
 
 ```
 
-## WireFrames
+## WireFrames and Architecture
 
+- ### Wireframe
+    - [Mobile and Tablet](https://i.imgur.com/G6SymvQ.jpg)
+    - [Desktop](https://i.imgur.com/D8fxRJj.jpg)
+
+- ### Architecture
+
+    - [React Architecture](https://docs.google.com/drawings/d/1oa4LSppOR4HILg5qeeeIGCAvEAg6EevgMvck7GDskJ4/edit?usp=sharing)
 
 ## MVP
+
+- ### MVP
+    - Create React App 
+    - Call and Render 3rd party API using Fetch, Async/Await
+    - Include React Router with 2 Routes
+    - Use 5 seperate components
+    - Mobile First Design
+    - Use React Hooks
+    - Deploy via Netlify
+    - Populate data for 1 mountain (Name, Latitude, longitude, logo, website url)
+
+- ### Post-MVP
+    - Add controlled search form/input.
+    - Populate MountainData.js with additional Mountain info.
+    - Get Twitter feed for mountain via Twitter API. 
+    - Add notes section for each mountain. 
+    - Add distance, drive time to mountain. 
+    - Add geolocation with latitude and longitude to map of US. 
 
 
 ## Components
 
+|Component|Description|
+|---------|-----------|
+|App|Renders other Components, Contains Routes.|
+|Nav|Creates links to other sections, HOme, Mountains, About.|
+|Home| Renders saved/favorited single mountains for real time weather tracking.|
+|Mountains|Contains list of mountains to select from with basic mountain information.|
+|About|Section that provides information about the app, contact, and other useful info.|
+|Single Mountain Info|Renders specific information pertianing to specific mountain. Such as Weather data.|
+|Weather|Pull real time data from [OpenWeatherMap.org](https://openweathermap.org/api) to be rendered in Single Mountain info.| 
 
+
+## Time/Priority Matrix
+
+### Tasks
+- #### MVP
+    - |Task|Priority|Estimated Time|Actual Time|
+      |----|--------|--------------|-----------|
+      |Setup App and all Components|H|1hr| TBD|
+      |Add Router|H|0.5Hr|TBD|
+      |Create mountainData.JS|M|0.5hr|TBD|
+      |Call API and and render info to Single Mountain|H|5hr|TBD|
+      |Add button, lift state, and render to Home for Single Mountain|H|5 hr|TBD|
+      |Styling|M|10hrs|TBD|
+      |bug fixes/final polish|M|3hr|TBD|
+      |Deploy to Netlify|H|2hr|TBD|
+      |Total Time||27hrs|TBD|
+
+- ### Post-MVP
+    - |Task|Priority|Estimated Time|Actual Time|
+      |----|--------|--------------|-----------|
+      |Add Search form/input|M|3hrs|TBD|
+      |Get Twitter Feed for mountain updates|L|10hrs|TBD|
+      |Get drive data|L|10hrs|TBD|
+      |Add geolocate to US map for pin|M|5hrs|TBD|
+      |Update mountain.data with more mountains|H|3hrs|TBD|
+      |Add Notes Section to single mountains|M|3hrs|TBD|
+      |Total Time||34hrs|TBD|
+
+## Additional Libraries
+-  React Bootstrap
+
+## Code Snippet
