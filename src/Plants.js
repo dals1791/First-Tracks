@@ -11,7 +11,7 @@ const Plants = (props)=>{
       setPlant(data)
         }
       useEffect(()=>{getPlant()}, [ ])
-      console.log("This is Plant state", plant)
+    //   console.log("This is Plant state", plant)
 
 const PlantInfo   = plant?.data.map((ele,index)=>{
 

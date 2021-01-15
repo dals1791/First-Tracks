@@ -9,7 +9,7 @@ const Jon = (props)=>{
       setPerson([data])
         }
       useEffect(()=>{getSnow()}, [ ])
-    //   console.log("This is Snow state", person)
+      console.log("This is Snow state", person)
 
 const JonSnow   = person?.map((ele,index)=>{
 
