@@ -8,13 +8,13 @@ const Weather = (props) => {
     let long = props.long
     
     
-    const getWeather = async () => {
+    const getWeather = async (lat, long) => {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=imperial&exclude=hourly,daily&appid=${apiKey}`)
         const data= await response.json()
         setWeather([data])
     }
     
-    useEffect(()=>getWeather(), [lat, long])  
+    useEffect(()=>getWeather(lat, long), [lat, long])  
     
 
     const WeatherInfo = weather?.map((ele, index)=>{

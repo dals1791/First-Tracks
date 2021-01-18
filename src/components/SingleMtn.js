@@ -10,6 +10,7 @@ const SingleMtn = ({data}) => {
                 <div> This is the Single moutains component</div>
                 <div>{data.props.name}</div> 
                 <Weather lat={data.props.lat} long={data.props.long}/>
+                <button>Add to My Tracks</button>
             </div>
         )
     }
