@@ -1,5 +1,6 @@
 const mtnData = [
     {
+        id: "1",
         name: "Wachusett Mountain" ,
         state: "Massachusetts",
         city: "Princeton",
@@ -12,6 +13,7 @@ const mtnData = [
 
     },
     {
+        id: "2",
         name: "Sunday River",
         state: "Maine",
         city: "Newry",

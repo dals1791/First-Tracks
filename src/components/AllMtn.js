@@ -2,10 +2,12 @@ import React from "react"
 
 
 const AllMtn = (props) => {
-    const mountainList  = props.mtn.map((ele, index)=> {
+    const mountainList  = props.mtn.map((ele)=> {
+        
         return(
             <>  
-            <div key={index} onClick={()=>{props.handleClick(index)}}>
+            <div key={ele.id} onClick={()=>{props.handleClick(ele.id)}}>
+                
                 {ele.name}
             </div>
             </>

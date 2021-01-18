@@ -8,18 +8,17 @@ const Mtns = (props) => {
     
     
     const displaySingleMtn = (id)=>{
-        // console.log("display single mtn handleCLick works")
-        const singleMtnData = mtnData?.map((ele, index)=>{
+        
+        const singleMtnData = mtnData?.map((ele)=>{
             return (
-                <SingleMtn
-                {...ele}
-                key={index}
-                />
+                <SingleMtn {...ele}/>
                 )
         })
-        setSingleMtn(singleMtnData[id])
+        
+        const arrIndex =singleMtnData.findIndex((ele)=>ele.props.id===id)
+        setSingleMtn(singleMtnData[arrIndex])
+    
     }
-    console.log("This is single mt state", singleMtn)
 
     return(
         <>
