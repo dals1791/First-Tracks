@@ -4,18 +4,19 @@ import mtnData from "../data/mountainData.js"
 
 const Mtns = () => {
 
-    const mountainInfo  = mtnData.map((ele, index)=> {
+    const mountainList  = mtnData.map((ele, index)=> {
         return(
-            <div>{ele.name}</div>
+            <>
+            <div key={index}>{ele.name}</div>
+            
+            </>
         )
     })
 
     return(
         <>
-        <div> This is the moutains component</div>
-        {mountainInfo}
-        <SingleMtn mtn={mountainInfo}/>
-        
+        <div> {mountainList}</div>
+        <SingleMtn mtn={mtnData}/>
         </>
     )
 }

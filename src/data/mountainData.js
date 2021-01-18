@@ -13,8 +13,14 @@ const mtnData = [
     },
     {
         name: "Sunday River",
+        state: "Maine",
+        city: "Newry",
+        address: "15 South Ridge Road",
         lat: "44.4734",
-        long: "-70.8569"
+        long: "-70.8569",
+        url:"https://www.sundayriver.com/" ,
+        logo: "https://cdn.branchcms.com/KQjez13kEV-543/images/logos/Logo-SundayRiverMaine-et-medium-2.png",
+        phone: "800-543-2754",
     }
 
 ]
