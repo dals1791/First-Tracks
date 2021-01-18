@@ -13,15 +13,17 @@ const Weather = (props) => {
         setWeather([data])
     }
     
-    useEffect(()=>{getWeather()}, [])  
+    useEffect(()=>getWeather, [])  
     // console.log("This is Snow state", weather)
 
-    const WeatherInfo   = weather?.map((ele, index)=>{
+    const WeatherInfo = weather?.map((ele, index)=>{
         return (
             <div key={index}>
-            <div>This is current Temp: {Math.floor(ele.current.temp)} °F</div>
+                <div>This is temp</div>
+                <div>This is lat and long</div>
+            {/* <div>This is current Temp: {Math.floor(ele.current.temp)} °F</div>
             <div>This is the timezone: {ele.timezone}</div>
-            <div>This is the location: {ele.lat} by {ele.lon}</div>
+            <div>This is the location: {ele.lat} by {ele.lon}</div> */}
             
             </div>
         )    

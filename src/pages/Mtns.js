@@ -1,22 +1,30 @@
-import React from "react"
+import React, {useState} from "react"
 import SingleMtn from "../components/SingleMtn"
+import AllMtn from "../components/AllMtn"
 import mtnData from "../data/mountainData.js"
 
-const Mtns = () => {
-
-    const mountainList  = mtnData.map((ele, index)=> {
-        return(
-            <>
-            <div key={index}>{ele.name}</div>
-            
-            </>
-        )
-    })
+const Mtns = (props) => {
+    const [singleMtn, setSingleMtn]=useState(null)
+    
+    
+    const displaySingleMtn = (id)=>{
+        // console.log("display single mtn handleCLick works")
+        const singleMtnData = mtnData?.map((ele, index)=>{
+            return (
+                <SingleMtn
+                {...ele}
+                key={index}
+                />
+                )
+        })
+        setSingleMtn(singleMtnData[id])
+    }
+    console.log("This is single mt state", singleMtn)
 
     return(
         <>
-        <div> {mountainList}</div>
-        <SingleMtn mtn={mtnData}/>
+        <AllMtn mtn={mtnData} handleClick={displaySingleMtn}/>
+       <SingleMtn data={singleMtn}/>
         </>
     )
 }

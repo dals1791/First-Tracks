@@ -1,29 +1,28 @@
 import React from "react"
 import Weather from "../components/Weather"
 
-const SingleMtn = (props) => {
+const SingleMtn = ({data}) => {
+    // console.log("This is singlemtn props/state", data?.props.name)
     
-    const singleMtnData = props.mtn.map((ele, index)=> {
-        // console.log("this is single mtn props", props.mtn)    
-        // console.log("This is single mtn name", ele.name)
-        return(
-            <div className="singleMtn" key={index}>
-            <div> This is the Single moutains component</div>
-            <div>{ele.name}</div>
-            <Weather lat={ele.lat} long={ele.long}/>
-        
-            </div>
+    const loaded =() =>{
+
+        return(<div className="singleMtn">
+        <div> This is the Single moutains component</div>
+        <div>{data.props.name}</div> 
+        <Weather lat={data.props.lat} long={data.props.long}/>
+    </div>
+
         )
-
-
-    })
+    }
+    const loading=()=>{
+        return <></>
+    }
     
     
     
     return(
-        <div>
-        {singleMtnData}
-        </div>
+        data ? loaded() : loading()
+        
     )
 }
 export default SingleMtn
