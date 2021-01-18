@@ -3,7 +3,6 @@ import Weather from "../components/Weather"
 
 const SingleMtn = ({data}) => {
     // console.log("This is singlemtn props/state", data?.props.name)
-    
     const loaded =() =>{
 
         return(<div className="singleMtn">

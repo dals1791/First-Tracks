@@ -206,4 +206,22 @@ API Response:
 ## Issues
 
 - Looping mountainData.js information through API call to get weather for specific lat and long. 
+  - Resolution: passed latitude and longitude down as props from singleMtn after mapping. Used inteprolation to add lat and long to API url to call specific weather data to the location. 
+  ```
+  const Weather = (props) => {
+    // console.log("This is props", props)
+    const apiKey= "bbb59f00c92b004f07e523eaa0647cf7"
+    const [weather, setWeather] = useState(null)
+    let lat = props.lat
+    let long = props.long
+    
+    const getWeather = async () => {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=imperial&exclude=hourly,daily&appid=${apiKey}`)
+        const data= await response.json()
+        setWeather([data])
+    }
+    ```
+
+- Infinite loop with API call using useEffect, blocked API key due to too many calls per minute. 
+  - Error Code: "React Hook useEffect has a missing dependency: 'getWeather'. Either include it or remove the dependency array  react-hooks/exhaustive-deps"
   - Resolution: TBD
