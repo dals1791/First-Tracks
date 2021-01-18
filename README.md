@@ -206,7 +206,7 @@ API Response:
 ## Issues
 
 - Looping mountainData.js information through API call to get weather for specific lat and long. 
-  - Resolution: passed latitude and longitude down as props from singleMtn after mapping. Used inteprolation to add lat and long to API url to call specific weather data to the location. 
+  - Resolution: Passed latitude and longitude down as props from singleMtn after mapping. useEffect updates whenever lat/long change and then added lat and long to API url via interpolation to call specific weather data based on the location. 
   ```
   const Weather = (props) => {
     // console.log("This is props", props)
