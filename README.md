@@ -175,17 +175,17 @@ API Response:
 
 ### Tasks
 - #### MVP
-    - |Task|Priority|Estimated Time|Actual Time|
-      |----|--------|--------------|-----------|
-      |Setup App and all Components|H|1hr| TBD|
-      |Add Router|H|0.5Hr|TBD|
-      |Create mountainData.JS|M|0.5hr|TBD|
-      |Call API and and render info to Single Mountain|H|5hr|TBD|
+    - |Task|Priority|Estimated Time|Actual Time|Status|
+      |----|--------|--------------|-----------|------|
+      |Setup App and all Components|H|1hr| 0.5hr|COMPLETE\
+      |Add Router|H|0.5Hr|0.5hr|COMPLETE|
+      |Create mountainData.JS|M|0.5hr|0.5hr|COMPLETE|
+      |Call API and and render info to Single Mountain|H|5hr|0.5hr|IN PROGRESS|
       |Add button, lift state, and render to Home for Single Mountain|H|5 hr|TBD|
       |Styling|M|10hrs|TBD|
       |bug fixes/final polish|M|3hr|TBD|
       |Deploy to Netlify|H|2hr|TBD|
-      |Total Time||27hrs|TBD|
+      |Total Time||27hrs|2.0hrs|
 
 - ### Post-MVP
     - |Task|Priority|Estimated Time|Actual Time|
@@ -202,3 +202,8 @@ API Response:
 -  React Bootstrap
 
 ## Code Snippet
+
+## Issues
+
+- Looping mountainData.js information through API call to get weather for specific lat and long. 
+  - Resolution: TBD
