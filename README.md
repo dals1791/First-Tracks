@@ -163,10 +163,11 @@ API Response:
 |Component|Description|
 |---------|-----------|
 |App|Renders other Components, Contains Routes.|
-|Nav|Creates links to other sections, HOme, Mountains, About.|
+|Nav|Creates links to other sections, Home, Mountains, About.|
 |Home| Renders saved/favorited single mountains for real time weather tracking.|
 |Mountains|Contains list of mountains to select from with basic mountain information.|
 |About|Section that provides information about the app, contact, and other useful info.|
+|All Mountain Info| Creates a clickable list of mountains in the mountains page|
 |Single Mountain Info|Renders specific information pertianing to specific mountain. Such as Weather data.|
 |Weather|Pull real time data from [OpenWeatherMap.org](https://openweathermap.org/api) to be rendered in Single Mountain info.| 
 
@@ -177,15 +178,15 @@ API Response:
 - #### MVP
     - |Task|Priority|Estimated Time|Actual Time|Status|
       |----|--------|--------------|-----------|------|
-      |Setup App and all Components|H|1hr| 0.5hr|COMPLETE\
+      |Setup App and all Components|H|1hr| 0.5hr|COMPLETE|
       |Add Router|H|0.5Hr|0.5hr|COMPLETE|
       |Create mountainData.JS|M|0.5hr|0.5hr|COMPLETE|
-      |Call API and and render info to Single Mountain|H|5hr|0.5hr|IN PROGRESS|
-      |Add button, lift state, and render to Home for Single Mountain|H|5 hr|TBD|
+      |Call API and and render info to Single Mountain|H|5hr|4hr|COMPLETE|
+      |Add button, lift state, and render to Home for Single Mountain|H|5hr|1.5hr|IN PROGRESS|
       |Styling|M|10hrs|TBD|
       |bug fixes/final polish|M|3hr|TBD|
-      |Deploy to Netlify|H|2hr|TBD|
-      |Total Time||27hrs|2.0hrs|
+      |Deploy to Netlify|H|2hr|0.5hr|COMPLETE|
+      |Total Time||27hrs|7.5hrs|
 
 - ### Post-MVP
     - |Task|Priority|Estimated Time|Actual Time|
@@ -205,7 +206,7 @@ API Response:
 
 ## Issues
 
-- Looping mountainData.js information through API call to get weather for specific lat and long. 
+1. Looping mountainData.js information through API call to get weather for specific lat and long. 
   - Resolution: Passed latitude and longitude down as props from singleMtn after mapping. useEffect updates whenever lat/long change and then added lat and long to API url via interpolation to call specific weather data based on the location. 
   ```
   const Weather = (props) => {
@@ -222,9 +223,19 @@ API Response:
         setWeather([data])
     }
     
-    useEffect(()=>getWeather(), [lat, long])
+    useEffect(()=>getWeather(lat, long), [lat, long])
     ```
 
-- Infinite loop with API call using useEffect, blocked API key due to too many calls per minute. 
+2. Infinite loop with API call using useEffect, blocked API key due to too many calls per minute. 
   - Error Code: "React Hook useEffect has a missing dependency: 'getWeather'. Either include it or remove the dependency array  react-hooks/exhaustive-deps"
+  - Resolution: Need to include dependency array to avoid infinite render. Also need to create a valid dependency to remove error code. 
+  ```
+  useEffect(()=>getWeather(lat, long), [lat, long])
+  ```
+  A blank dependency array will yield the error coe seen above
+
+3. Lift Weather API data to Home page onClick of "Follow button". Currently can only lift the hard coded data in mountainData.js. 
+  - Questions:
+    - Can you lift an entire component and render everything that was defined in a child component?
+    - Does the structure need to be re-arranged to get Weather Data in the home page onCLick? 
   - Resolution: TBD
