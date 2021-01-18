@@ -7,13 +7,14 @@ const Weather = (props) => {
     let lat = props.lat
     let long = props.long
     
+    
     const getWeather = async () => {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=imperial&exclude=hourly,daily&appid=${apiKey}`)
         const data= await response.json()
         setWeather([data])
     }
     
-    useEffect(()=>getWeather, [])  
+    useEffect(()=>getWeather(), [lat, long])  
     // console.log("This is Snow state", weather)
 
     const WeatherInfo = weather?.map((ele, index)=>{
@@ -21,9 +22,9 @@ const Weather = (props) => {
             <div key={index}>
                 <div>This is temp</div>
                 <div>This is lat and long</div>
-            {/* <div>This is current Temp: {Math.floor(ele.current.temp)} °F</div>
+            <div>This is current Temp: {Math.floor(ele.current.temp)} °F</div>
             <div>This is the timezone: {ele.timezone}</div>
-            <div>This is the location: {ele.lat} by {ele.lon}</div> */}
+            <div>This is the location: {ele.lat} by {ele.lon}</div>
             
             </div>
         )    

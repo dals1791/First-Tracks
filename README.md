@@ -215,11 +215,14 @@ API Response:
     let lat = props.lat
     let long = props.long
     
+    
     const getWeather = async () => {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=imperial&exclude=hourly,daily&appid=${apiKey}`)
         const data= await response.json()
         setWeather([data])
     }
+    
+    useEffect(()=>getWeather(), [lat, long])
     ```
 
 - Infinite loop with API call using useEffect, blocked API key due to too many calls per minute. 
