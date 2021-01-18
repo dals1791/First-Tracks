@@ -4,6 +4,7 @@ import AllMtn from "../components/AllMtn"
 import mtnData from "../data/mountainData.js"
 
 const Mtns = (props) => {
+    
     const [singleMtn, setSingleMtn]=useState(null)
     
     
@@ -12,6 +13,7 @@ const Mtns = (props) => {
         const singleMtnData = mtnData?.map((ele)=>{
             return (
                 <SingleMtn {...ele}/>
+
                 )
         })
         
@@ -23,7 +25,8 @@ const Mtns = (props) => {
     return(
         <>
         <AllMtn mtn={mtnData} handleClick={displaySingleMtn}/>
-       <SingleMtn data={singleMtn}/>
+       <SingleMtn data={singleMtn} addData={props.add}/>
+       
         </>
     )
 }

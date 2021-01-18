@@ -1,7 +1,7 @@
 import React from "react"
 import Weather from "../components/Weather"
 
-const SingleMtn = ({data}) => {
+const SingleMtn = ({data, addData}) => {
     
     const loaded =() =>{
 
@@ -10,7 +10,7 @@ const SingleMtn = ({data}) => {
                 <div> This is the Single moutains component</div>
                 <div>{data.props.name}</div> 
                 <Weather lat={data.props.lat} long={data.props.long}/>
-                <button>Add to My Tracks</button>
+                <button onClick={()=>{addData(data.props, <Weather/>)}}> + Follow +</button>
             </div>
         )
     }
@@ -19,7 +19,10 @@ const SingleMtn = ({data}) => {
     }
 
     return(
+        
         data ? loaded() : loading()
+        
+        
         
     )
 }

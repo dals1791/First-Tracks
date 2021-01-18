@@ -1,5 +1,5 @@
 // Import React Libraries--------------------------------------
-import React from "react"
+import React, {useState} from "react"
 import {Switch, Route} from "react-router-dom"
 // Import Styles--------------------------------------
 import './App.css';
@@ -11,7 +11,15 @@ import Nav from "./components/Nav"
 // Main App-------------------------------------------------
 
 function App() {
-  
+const [myMtns, setMyMtns]= useState([])
+const addToHome =(data)=>{
+  // console.log("THis is the singleMTn Data", data, weatherComp)
+  // console.log("this is th weather comp", weatherComp)
+  setMyMtns([...myMtns, data])
+
+}
+
+
 
 return (
   <>
@@ -19,10 +27,10 @@ return (
     <Nav />
       <Switch>
         <Route exact path="/">
-          <Home />
+          <Home followed={myMtns}/>
         </Route>
         <Route path="/Mtns">
-          <Mtns />
+          <Mtns add={addToHome}/>
         </Route>
         <Route path="/About">
           <About />

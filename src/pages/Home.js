@@ -1,8 +1,15 @@
 import React from "react"
 
-const Home = () => {
+const Home = ({followed}) => {
+   const myMtns = followed?.map((ele, index)=>{
     return(
-        <div> This is the Home component</div>
+        <div> {ele.name}</div>
+    )
+
+
+   })
+    return(
+        <div>{myMtns} </div>
     )
 }
 export default Home
