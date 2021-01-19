@@ -1,6 +1,9 @@
 .App {
   text-align: center;
 }
+.title{
+text-align: center;
+}
 .Link{
   text-decoration: none;
   color: black;
@@ -12,26 +15,31 @@
   border: 1px solid;
 
 }
-.mountainList{
+/* .mountain-list{
   text-align: center;
   display: flex;
   justify-content: space-around;
   align-content: center;
   
 
-}
-.allMtns{
+} */
+.all-mtns{
+  margin: 10px 0;
+  text-align: center;
+
   
-  border: 1px solid;
   
 
 }
-.mtntitle{
+.mtn-dropdown{
+  background-color: blue;
+}
+.mtn-title{
   margin: 10px;
 
 }
-.singleMtn{
-  border: 1px solid black;
+.single-mtn{
+  /* border: 1px solid black; */
   width: 50%;
   
   
@@ -40,7 +48,7 @@
 .home{
   display: flex;
 }
-.myMtn{
+.my-mtn{
   border: 1px solid black;
   width: 50%;
   

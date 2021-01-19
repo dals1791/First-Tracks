@@ -2,6 +2,11 @@ import React, {useState} from "react"
 import SingleMtn from "../components/SingleMtn"
 import AllMtn from "../components/AllMtn"
 import mtnData from "../data/mountainData.js"
+// React-Bootstrap Components ---------------------------
+import Col from "react-bootstrap/Col"
+import Row from "react-bootstrap/Row"
+import Container from "react-bootstrap/Container"
+import Dropdown from "react-bootstrap/Dropdown"
 
 const Mtns = (props) => {
     
@@ -23,14 +28,16 @@ const Mtns = (props) => {
     }
 
     return(
-        <div className="mountainList">
-            <div className="allMtn">
+        
+        <Container className="mountain-list">
+            <div className="all-mtn">
                 <AllMtn mtn={mtnData} handleClick={displaySingleMtn}/>
             </div>
-            <div className="singleMtn">
+            
+            <div className="single-mtn">
                 <SingleMtn data={singleMtn} addData={props.add}/>
             </div>
-        </div>
+        </Container>
     )
 }
 export default Mtns

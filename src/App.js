@@ -8,6 +8,8 @@ import Home from "./pages/Home"
 import Mtns from "./pages/Mtns"
 import About from "./pages/About"
 import Nav from "./components/Nav"
+// Import React-Bootstrap----------------------------------
+import 'bootstrap/dist/css/bootstrap.min.css';
 // Main App-------------------------------------------------
 
 function App() {
