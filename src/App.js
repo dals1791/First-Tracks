@@ -12,12 +12,13 @@ import Nav from "./components/Nav"
 
 function App() {
 const [myMtns, setMyMtns]= useState([])
-const addToHome =(data)=>{
+const addToHome =(data, weather)=>{
   // console.log("THis is the singleMTn Data", data, weatherComp)
   // console.log("this is th weather comp", weatherComp)
-  setMyMtns([...myMtns, data])
+  setMyMtns([...myMtns, {data, weather}])
 
 }
+console.log("This is home state", myMtns)
 
 
 

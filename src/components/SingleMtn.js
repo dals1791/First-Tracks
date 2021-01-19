@@ -10,7 +10,8 @@ const SingleMtn = ({data, addData}) => {
                 <div> This is the Single moutains component</div>
                 <div>{data.props.name}</div> 
                 <Weather lat={data.props.lat} long={data.props.long}/>
-                <button onClick={()=>{addData(data.props, <Weather/>)}}> + Follow +</button>
+                <button onClick={()=>{addData(data.props, 
+                {lat: data.props.lat, long: data.props.long})}}> + Follow +</button>
             </div>
         )
     }

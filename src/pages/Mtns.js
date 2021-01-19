@@ -23,11 +23,11 @@ const Mtns = (props) => {
     }
 
     return(
-        <>
+        <div className="mountainList">
         <AllMtn mtn={mtnData} handleClick={displaySingleMtn}/>
        <SingleMtn data={singleMtn} addData={props.add}/>
        
-        </>
+        </div>
     )
 }
 export default Mtns

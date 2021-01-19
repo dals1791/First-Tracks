@@ -5,15 +5,15 @@ const AllMtn = (props) => {
     const mountainList  = props.mtn.map((ele)=> {
         
         return(
-            <>  
-            <div key={ele.id} onClick={()=>{props.handleClick(ele.id)}}>
+            <div key={ele.id}>  
+            <div className="mtntitle"  onClick={()=>{props.handleClick(ele.id)}}>
                 
                 {ele.name}
             </div>
-            </>
+            </div>
         )
     })
-    return <div>{mountainList}</div>
+    return <div className="allMtns">{mountainList}</div>
 }
 
 export default AllMtn
