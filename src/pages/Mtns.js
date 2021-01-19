@@ -24,9 +24,12 @@ const Mtns = (props) => {
 
     return(
         <div className="mountainList">
-        <AllMtn mtn={mtnData} handleClick={displaySingleMtn}/>
-       <SingleMtn data={singleMtn} addData={props.add}/>
-       
+            <div className="allMtn">
+                <AllMtn mtn={mtnData} handleClick={displaySingleMtn}/>
+            </div>
+            <div className="singleMtn">
+                <SingleMtn data={singleMtn} addData={props.add}/>
+            </div>
         </div>
     )
 }

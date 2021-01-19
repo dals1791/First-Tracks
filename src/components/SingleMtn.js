@@ -6,8 +6,7 @@ const SingleMtn = ({data, addData}) => {
     const loaded =() =>{
 
         return(
-            <div className="singleMtn">
-                <div> This is the Single moutains component</div>
+            <div >
                 <div>{data.props.name}</div> 
                 <Weather lat={data.props.lat} long={data.props.long}/>
                 <button onClick={()=>{addData(data.props, 

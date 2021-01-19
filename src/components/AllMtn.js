@@ -6,10 +6,10 @@ const AllMtn = (props) => {
         
         return(
             <div key={ele.id}>  
-            <div className="mtntitle"  onClick={()=>{props.handleClick(ele.id)}}>
-                
-                {ele.name}
-            </div>
+                <div className="mtntitle"  
+                onClick={()=>{props.handleClick(ele.id)}}>
+                    {ele.name}
+                </div>
             </div>
         )
     })
