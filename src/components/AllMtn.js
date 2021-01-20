@@ -1,8 +1,5 @@
 import React from "react"
 // React-Bootstrap Components ---------------------------
-import Col from "react-bootstrap/Col"
-import Row from "react-bootstrap/Row"
-import Container from "react-bootstrap/Container"
 import Dropdown from "react-bootstrap/Dropdown"
 
 

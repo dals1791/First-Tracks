@@ -1,10 +1,10 @@
 import React from "react"
 import Weather from "../components/Weather"
 // React-Bootstrap Components ---------------------------
-import Col from "react-bootstrap/Col"
-import Row from "react-bootstrap/Row"
-import Container from "react-bootstrap/Container"
 import Card from 'react-bootstrap/Card'
+// FontAwesome Icons
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 const SingleMtn = ({data, addData}) => {
     
@@ -19,10 +19,9 @@ const SingleMtn = ({data, addData}) => {
                     <Card.Text>
                         <Weather lat={data.props.lat} long={data.props.long}/>
                     </Card.Text>
-                    <button className="follow-btn" onClick={()=>{addData(data.props, 
-                    {lat: data.props.lat, long: data.props.long})}}> 
-                    + Follow +</button>
                 </Card.Body>
+                <FontAwesomeIcon className="fav-icon" icon={faHeart} size="2x" onClick={()=>{addData(data.props, 
+                    {lat: data.props.lat, long: data.props.long})}}/>
             </Card>
         </>
         )

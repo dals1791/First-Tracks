@@ -3,10 +3,8 @@ import SingleMtn from "../components/SingleMtn"
 import AllMtn from "../components/AllMtn"
 import mtnData from "../data/mountainData.js"
 // React-Bootstrap Components ---------------------------
-import Col from "react-bootstrap/Col"
-import Row from "react-bootstrap/Row"
 import Container from "react-bootstrap/Container"
-import Dropdown from "react-bootstrap/Dropdown"
+
 
 const Mtns = (props) => {
     

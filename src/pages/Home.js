@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Weather from "../components/Weather"
 // React-Bootstrap Components ---------------------------
-import Col from "react-bootstrap/Col"
-import Row from "react-bootstrap/Row"
 import Container from "react-bootstrap/Container"
 import Card from 'react-bootstrap/Card'
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import { faBolt } from '@fortawesome/free-solid-svg-icons'
 
 
 const Home = ({homeMtns}) => {
