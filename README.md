@@ -208,34 +208,54 @@ API Response:
 
 1. Looping mountainData.js information through API call to get weather for specific lat and long. 
   - Resolution: Passed latitude and longitude down as props from singleMtn after mapping. useEffect updates whenever lat/long change and then added lat and long to API url via interpolation to call specific weather data based on the location. 
-  ```
-  const Weather = (props) => {
-    // console.log("This is props", props)
-    const apiKey= "bbb59f00c92b004f07e523eaa0647cf7"
-    const [weather, setWeather] = useState(null)
-    let lat = props.lat
-    let long = props.long
-    
-    
-    const getWeather = async () => {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=imperial&exclude=hourly,daily&appid=${apiKey}`)
-        const data= await response.json()
-        setWeather([data])
-    }
-    
-    useEffect(()=>getWeather(lat, long), [lat, long])
     ```
+    const Weather = (props) => {
+      // console.log("This is props", props)
+      const apiKey= "bbb59f00c92b004f07e523eaa0647cf7"
+      const [weather, setWeather] = useState(null)
+      let lat = props.lat
+      let long = props.long
+      
+      
+      const getWeather = async () => {
+          const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&units=imperial&exclude=hourly,daily&appid=${apiKey}`)
+          const data= await response.json()
+          setWeather([data])
+      }
+      useEffect(()=>getWeather(lat, long), [lat, long])
+    
 
 2. Infinite loop with API call using useEffect, blocked API key due to too many calls per minute. 
   - Error Code: "React Hook useEffect has a missing dependency: 'getWeather'. Either include it or remove the dependency array  react-hooks/exhaustive-deps"
   - Resolution: Need to include dependency array to avoid infinite render. Also need to create a valid dependency to remove error code. 
-  ```
-  useEffect(()=>getWeather(lat, long), [lat, long])
-  ```
-  A blank dependency array will yield the error coe seen above
+    ```
+    useEffect(()=>getWeather(lat, long), [lat, long])
+  
+    A blank dependency array will yield the error code seen above
 
 3. Lift Weather API data to Home page onClick of "Follow button". Currently can only lift the hard coded data in mountainData.js. 
   - Questions:
     - Can you lift an entire component and render everything that was defined in a child component?
     - Does the structure need to be re-arranged to get Weather Data in the home page onCLick? 
-  - Resolution: TBD
+  - Resolution: Need to pass hard data and api data as a single object in order to map and render together. [{}, {}].
+    ```
+    const [myMtns, setMyMtns]= useState([])
+    const addToHome =(data, weather)=>{
+    
+    setMyMtns([...myMtns, {data, weather}]) 
+    }
+
+4. Cant display "loading()" prompt on home screen before adding favorite mountains.
+    ```
+    return(
+        
+        homeMtns ? loaded(): loading()
+    )
+  - resolution: state was and array which is naturally true. ternary function was activated imediately. Updated conditional to be state.length which is naturally false when the array.length is empty. 
+
+    ```
+      return(
+        
+         homeMtns ? loaded(): loading()
+      )
+
