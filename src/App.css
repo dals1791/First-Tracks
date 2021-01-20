@@ -23,19 +23,29 @@ text-align: center;
   
 
 } */
-.all-mtns{
-  margin: 10px 0;
-  text-align: center;
 
-  
-  
-
-}
 .mtn-dropdown{
+  text-align: center;
+  margin: 5px 0;
   background-color: blue;
+  border-radius: 10px;
 }
-.mtn-title{
-  margin: 10px;
+button.btn-success.mtn-dropdown{
+  background-color: red;
+}
+.mtn-dropdown.show button.btn-sucess{
+  background-color: purple;
+}
+div.dropdown-menu.mtn.dropdown-list.show{
+  background-color: red;
+}
+#mtn-list{
+/* transform: translate(60px, 45px, 0px); */
+text-align: left;
+
+}
+.card-img-top{
+object-fit: cover;
 
 }
 .single-mtn{

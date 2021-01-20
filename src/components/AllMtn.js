@@ -21,18 +21,17 @@ const AllMtn = (props) => {
     })
     return (
         <>
-    <Container className="all-mtns">
+    
         <Dropdown className="mtn-dropdown">
             <Dropdown.Toggle variant="success" id="dropdown-basic" className="mtn-dropdown">
                     Mountains
             </Dropdown.Toggle>
 
-            <Dropdown.Menu className="mtn-dropdown">
+            <Dropdown.Menu className="mtn-dropdown-list" id="mtn-list">
                 {mountainList}
             </Dropdown.Menu>
         </Dropdown>
     
-    </Container>
     
             </>
     )

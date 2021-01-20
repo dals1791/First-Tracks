@@ -21,7 +21,7 @@ const mtnData = [
         lat: "44.4734",
         long: "-70.8569",
         url:"https://www.sundayriver.com/" ,
-        logo: "https://cdn.branchcms.com/KQjez13kEV-543/images/logos/Logo-SundayRiverMaine-et-medium-2.png",
+        logo: "https://images.ctfassets.net/ycpblqmln66n/rbT9YvvMasmggaK88Ams8/b412adf76645b2206ae7fe51ab1e0e08/sunday-river_2x.png",
         phone: "800-543-2754",
     }
 

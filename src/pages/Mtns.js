@@ -34,9 +34,9 @@ const Mtns = (props) => {
                 <AllMtn mtn={mtnData} handleClick={displaySingleMtn}/>
             </div>
             
-            <div className="single-mtn">
+            <Container className="single-mtn">
                 <SingleMtn data={singleMtn} addData={props.add}/>
-            </div>
+            </Container>
         </Container>
     )
 }
