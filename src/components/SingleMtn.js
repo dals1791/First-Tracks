@@ -12,7 +12,7 @@ const SingleMtn = ({data, addData}) => {
 
         return(
         <>
-            <Card style={{ width: '100%' }}>
+            <Card style={{ width: '16rem' }}>
                 <Card.Img variant="top" src={data.props.logo} />
                 <Card.Body>
                     <Card.Title>{data.props.name}</Card.Title>

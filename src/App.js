@@ -2,7 +2,8 @@
 import React, {useState} from "react"
 import {Switch, Route} from "react-router-dom"
 // Import Styles--------------------------------------
-import './App.css';
+import "./App.css";
+import "./fontawesome.css"
 // Import Components--------------------------------------
 import Home from "./pages/Home"
 import Mtns from "./pages/Mtns"
@@ -13,19 +14,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Main App-------------------------------------------------
 
 function App() {
-const [myMtns, setMyMtns]= useState([])
-const addToHome =(data, weather)=>{
-  setMyMtns([...myMtns, {data, weather}])
-
-}
-
-return (
-  <>
+  const [myMtns, setMyMtns]= useState([])
+  const addToHome =(data, weather)=>{
+    
+    setMyMtns([...myMtns, {data, weather}])
+    
+  }
+  // console.log(myMtns)
+  
+  
+  return (
+    <>
     <div>
     <Nav />
       <Switch>
         <Route exact path="/">
-          <Home followed={myMtns}/>
+          <Home homeMtns={myMtns}/>
         </Route>
         <Route path="/Mtns">
           <Mtns add={addToHome}/>

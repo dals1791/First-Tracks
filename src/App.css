@@ -1,8 +1,9 @@
 .App {
+  max-width: 1024px;
   text-align: center;
 }
 .title{
-text-align: center;
+text-align: right;
 }
 .Link{
   text-decoration: none;
@@ -15,6 +16,30 @@ text-align: center;
   border: 1px solid;
 
 }
+.nav-links{
+  background-color: white;
+  border: 1px solid;
+  border-radius: 10px;
+  font-size: 24px;
+  padding: .25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  
+  left: .1rem;
+  top: 3.5rem;
+  z-Index: 1000;
+}
+.home{
+  
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.home-card{
+  margin: 0.5rem 0;
+}
+
 /* .mountain-list{
   text-align: center;
   display: flex;
@@ -55,13 +80,26 @@ object-fit: cover;
   
 
 }
-.home{
-  display: flex;
-}
 .my-mtn{
   border: 1px solid black;
   width: 50%;
-  
+}
+/* Media Queries */
+@media only screen and (min-width: 425px){
   
 
+}
+@media only screen and (min-width: 765px){
+  .nav-links{    
+    left: 1.5rem;
+  }
+
+  
+}
+@media only screen and (min-width: 1024px){
+  .nav-links{    
+    left: 2rem;
+  }
+
+  
 }

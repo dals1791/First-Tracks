@@ -1,0 +1,11 @@
+.hamburger-icon{
+    color: cyan;
+    background-color: black;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: .25rem;
+    margin: .25rem 0;
+}
+.bolt{
+    color: orange;
+  }
