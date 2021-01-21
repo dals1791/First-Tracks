@@ -6,6 +6,7 @@ const Weather = (props) => {
     const [weather, setWeather] = useState(null)
     let lat = props.lat
     let long = props.long
+    // console.log(lat, long)
     
     
     const getWeather = async (lat, long) => {
@@ -15,7 +16,7 @@ const Weather = (props) => {
     }
     
     useEffect(()=>getWeather(lat, long), [lat, long])  
-    
+    // console.log("this is weather", weather)
 
     const WeatherInfo = weather?.map((ele, index)=>{
         return (

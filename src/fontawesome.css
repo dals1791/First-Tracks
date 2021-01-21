@@ -7,7 +7,9 @@
     margin: .25rem 0;
 }
 .fa-heart{
-    color: black;
+    /* color: grey; */
+    align-self: flex-end;
+    margin: 0px 10px 5px 0;
 
     
 }

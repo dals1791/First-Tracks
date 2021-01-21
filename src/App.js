@@ -1,5 +1,5 @@
 // Import React Libraries--------------------------------------
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 import {Switch, Route} from "react-router-dom"
 // Import Styles--------------------------------------
 import "./App.css";
@@ -14,14 +14,25 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // Main App-------------------------------------------------
 
 function App() {
-  const [myMtns, setMyMtns]= useState([])
-  const addToHome =(data, weather)=>{
+  const [favorites, setFavorites]= useState([])
+
+  const handleFavorites =(data)=>{
+    console.log("This is the data in App", data)
+    const addFavorites = favorites.slice()
+    const idMatch = favorites.some((mtn)=>mtn.id===data.id)
     
-    setMyMtns([...myMtns, {data, weather}])
-    
+    if(idMatch===true){
+        const index = addFavorites.indexOf(data)
+      addFavorites.splice(index,1)
+      setFavorites(addFavorites)
+    }
+    else{
+        // iconColor = "red"
+        addFavorites.push(data)
+        setFavorites(addFavorites)
+    }
   }
-  // console.log(myMtns)
-  
+  console.log("This is my favorites", favorites)
   
   return (
     <>
@@ -29,10 +40,13 @@ function App() {
     <Nav />
       <Switch>
         <Route exact path="/">
-          <Home homeMtns={myMtns}/>
+        
+        <Home  favorites={favorites} handleFavorites={handleFavorites}/>
+        
         </Route>
         <Route path="/Mtns">
-          <Mtns add={addToHome}/>
+          
+         <Mtns favorites={favorites} handleFavorites={handleFavorites}/> 
         </Route>
         <Route path="/About">
           <About />

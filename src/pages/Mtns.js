@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useEffect, useState} from "react"
 import SingleMtn from "../components/SingleMtn"
 import AllMtn from "../components/AllMtn"
 import mtnData from "../data/mountainData.js"
@@ -7,33 +7,26 @@ import Container from "react-bootstrap/Container"
 
 
 const Mtns = (props) => {
+    const mountains = mtnData?.map((ele)=>{
+        // console.log("This is name", ele.name)
+        return <AllMtn {...ele}/>
+    })
+    // console.log("this is mountains", mountains)
     
-    const [singleMtn, setSingleMtn]=useState(null)
+    const [singleMtn, setSingleMtn]=useState()
     
-    
-    const displaySingleMtn = (id)=>{
-        
-        const singleMtnData = mtnData?.map((ele)=>{
-            return (
-                <SingleMtn {...ele}/>
-
-                )
-        })
-        
-        const arrIndex =singleMtnData.findIndex((ele)=>ele.props.id===id)
-        setSingleMtn(singleMtnData[arrIndex])
-    
+    const handleDisplayMtn = (obj)=>{ 
+        setSingleMtn(obj)
     }
-
+    console.log("This is the singleMtn State", singleMtn)
+    useEffect(()=>handleDisplayMtn(), [])
     return(
-        
         <Container className="mountain-list">
             <div className="all-mtn">
-                <AllMtn mtn={mtnData} handleClick={displaySingleMtn}/>
+                <AllMtn mtn={mountains} handleClick={handleDisplayMtn}/>
             </div>
-            
             <Container className="single-mtn">
-                <SingleMtn data={singleMtn} addData={props.add}/>
+                <SingleMtn data={singleMtn} handleFavorites={props.handleFavorites} favorites={props.favorites} />
             </Container>
         </Container>
     )

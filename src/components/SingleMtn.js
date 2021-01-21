@@ -1,28 +1,28 @@
+// React
 import React from "react"
+// components
 import Weather from "../components/Weather"
+import ToggleSwitch from "./toggleSwitch"
 // React-Bootstrap Components ---------------------------
 import Card from 'react-bootstrap/Card'
-// FontAwesome Icons
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
-const SingleMtn = ({data, addData}) => {
-    
+
+const SingleMtn = ({data, handleFavorites, favorites, iconColor}) => {
     const loaded =() =>{
 
         return(
         <>
-            <Card style={{ width: '16rem' }}>
-                <Card.Img variant="top" src={data.props.logo} />
+           <Card style={{ width: '16rem' }}>
+                <Card.Img variant="top" src={data.logo} />
                 <Card.Body>
-                    <Card.Title>{data.props.name}</Card.Title>
+                    <Card.Title>{data.name}</Card.Title>
                     <Card.Text>
-                        <Weather lat={data.props.lat} long={data.props.long}/>
+                        <Weather lat={data.lat} long={data.long}/>
                     </Card.Text>
                 </Card.Body>
-                <FontAwesomeIcon className="fav-icon" icon={faHeart} size="2x" onClick={()=>{addData(data.props, 
-                    {lat: data.props.lat, long: data.props.long})}}/>
+                <ToggleSwitch data={data} handleFavorites={handleFavorites} favorites={favorites} iconColor={iconColor} />
             </Card>
+            
         </>
         )
     }
@@ -31,11 +31,9 @@ const SingleMtn = ({data, addData}) => {
     }
 
     return(
-        
+        // <></>
         data ? loaded() : loading()
-        
-        
-        
     )
 }
 export default SingleMtn
+

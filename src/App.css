@@ -77,9 +77,8 @@ object-fit: cover;
   /* border: 1px solid black; */
   width: 50%;
 }
-.fa-heart{
-  align-self: flex-end;
-  margin: 0px 10px 5px 0;
+.fa-heart.fav-icon{
+  
 }
 .my-mtn{
   border: 1px solid black;

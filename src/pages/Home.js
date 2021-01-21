@@ -1,35 +1,38 @@
 import React from "react"
 import Weather from "../components/Weather"
+import ToggleSwitch from "../components/toggleSwitch"
 // React-Bootstrap Components ---------------------------
 import Container from "react-bootstrap/Container"
 import Card from 'react-bootstrap/Card'
+// FontAwesome Icons
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 
-const Home = ({homeMtns}) => {
-    // console.log("This is the lifted weather", weather)
+const Home = ({favorites, handleFavorites}) => {
+    
+    console.log(favorites)
 //    const[state, setState]=useState(null)
-const myMtns = homeMtns.map((ele)=>{
-    return(
-        <Card key={ele.data.id} style={{ width: '18rem' }} className="home-card">
-            <Card.Img variant="top" src={ele.data.logo} />
-            <Card.Body>
-                <Card.Title>{ele.data.name}</Card.Title>
-                <Card.Text>
-                <Weather lat={ele.weather.lat} long={ele.weather.long}/>
-                </Card.Text>
-            </Card.Body>
-        </Card>
-    )
+const myMtns = favorites?.map((ele)=>{
+        return(
+            <Card key={ele.id} style={{ width: '18rem' }} className="home-card">
+                <Card.Img variant="top" src={ele.logo} />
+                <Card.Body>
+                    <Card.Title>{ele.name}</Card.Title>
+                    <Card.Text>
+                    <Weather lat={ele.lat} long={ele.long}/>
+                    </Card.Text>
+                </Card.Body>
+                <ToggleSwitch data={ele} handleFavorites={handleFavorites} favorites={favorites}/>
+            </Card>
+        )
    }) 
 
 const loaded=()=>{  
-    
-
    return (
-    <>
-    {/* <h2>{followed[0].data.name}</h2> */}
-   <Container className="home">{myMtns}</Container>
-    </>
+       <>
+         <Container className="home">{myMtns}</Container>
+        </>
    )
 }
 const loading=()=>{
@@ -39,7 +42,7 @@ const loading=()=>{
     
    return(
         // <Container className="home">{myMtns} </Container>
-        homeMtns.length ? loaded(): loading()
+        favorites.length ? loaded(): loading()
     )
 }
 export default Home
