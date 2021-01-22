@@ -13,6 +13,12 @@ html {
   margin: 0 auto;
   border-left: 1px solid rgba(70, 162, 159, 1);
   border-right: 1px solid rgba(70, 162, 159, 1);
+  background-image: radial-gradient(
+    farthest-corner at 0px 0px,
+    rgba(31, 40, 51, 0.8),
+    0.02%,
+    rgba(11, 13, 16, 1)
+  );
 }
 .App {
   max-width: 1024px;
@@ -20,6 +26,7 @@ html {
   height: 100%;
   text-align: center;
   color: rgba(199, 202, 205, 1);
+  
 }
 .title {
   font-family: "Electrolize", sans-serif;
@@ -59,9 +66,10 @@ a.Link:hover {
   justify-content: space-around;
   font-family: 'Open Sans', sans-serif;
 }
-.home {
-  justify-content: space-around;
-  flex-wrap: wrap;
+.home.container {
+  /* align-items: center; */
+  justify-content: center;
+  /* flex-wrap: wrap; */
   font-family: 'Open Sans', sans-serif;
 }
 .home-text {
@@ -114,6 +122,9 @@ a.dropdown-item:hover {
   object-fit: cover;
   background-color: rgba(199, 202, 205, 1);
 }
+.mtn-url{
+  color: rgba(102, 252, 241, 1);
+}
 .card .card-body {
   padding: 0.75rem;
   background-color: rgba(31, 40, 51, 1);
@@ -161,7 +172,7 @@ div.card-title{
 .api{
   color:rgba(102, 252, 241, 1);
 }
-.api:hover, .contact-link:hover{
+.api:hover, .contact-link:hover, .mtn-url:hover{
   color: orange;
 }
 

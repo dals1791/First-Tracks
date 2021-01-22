@@ -12,7 +12,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 const Home = ({ favorites, handleFavorites, storageFavorites }) => {
   const myMtns = favorites?.map((ele) => {
     return (
-      <Card key={ele.id} style={{ width: "18rem" }} className="home-card">
+      <Card key={ele.id} style={{ width: "auto" }} className="home-card">
         {/* <Card.Img variant="top" src={ele.logo} /> */}
         <Card.Body>
           <div className="title-bar"><Card.Title>{ele.name}</Card.Title>
