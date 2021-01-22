@@ -10,20 +10,22 @@ const SingleMtn = ({ data, handleFavorites, favorites, iconColor }) => {
   const loaded = () => {
     return (
       <>
-        <Card style={{ width: "16rem" }}>
+        <Card className="card-shape" style={{ width: "16rem" }}>
           <Card.Img variant="top" src={data.logo} />
           <Card.Body>
             <Card.Title>{data.name}</Card.Title>
             <Card.Text>
               <Weather lat={data.lat} long={data.long} />
             </Card.Text>
-          </Card.Body>
-          <ToggleSwitch
+            <div className="toggle-icon"> <ToggleSwitch
             data={data}
             handleFavorites={handleFavorites}
             favorites={favorites}
             iconColor={iconColor}
-          />
+            
+          /></div>
+          </Card.Body>
+          
         </Card>
       </>
     );

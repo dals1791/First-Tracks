@@ -1,5 +1,6 @@
 // Import React Libraries--------------------------------------
 import React, {useState} from "react"
+import {Link} from "react-router-dom"
 // import React-Bootsrrap
 import Container from 'react-bootstrap/Container';
 import Col from "react-bootstrap/Col"
@@ -20,7 +21,7 @@ const Nav = () => {
 
     return(
         <>
-        <Container>
+        <Container r>
             <Row className="nav-bar">
                 <Col xs={2}>
                 <FontAwesomeIcon 
@@ -30,7 +31,7 @@ const Nav = () => {
                 onClick={handleClick}/>
                 </Col>
                 <Col xs={10}>
-                    <h1 className="title">First Tracks</h1>
+                    <Link to="/" className="title"><h1>First Tracks</h1></Link>
                 </Col>
             </Row>
             

@@ -1,18 +1,24 @@
-.hamburger-icon{
-    color: rgba(102, 252, 241, 1);
-    border-radius: 5px;
-    padding: .25rem;
-    margin: .25rem 0;
+.hamburger-icon {
+  color: rgba(102, 252, 241, 1);
+  border-radius: 5px;
+  padding: 0.25rem;
+  margin: 0.25rem 0;
 }
-.fa-heart{
-    /* color: grey; */
-    align-self: flex-end;
-    margin: 0px 10px 5px 0;
+.hamburger-icon:hover{
+    color: rgba(70, 162, 159, 1);
 }
-#homeheart{
-    color: red;
-    margin: 0 .5rem;
+.svg-inline--fa.fav-icon {
+  margin: 0px 10px 5px 0;
 }
-.bolt{
-    color: orange;
-  }
+.toggle-icon {
+    margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+#homeheart {
+  color: red;
+  margin: 0 0.5rem;
+}
+.bolt {
+  color: orange;
+}

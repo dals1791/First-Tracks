@@ -23,7 +23,7 @@ const AllMtn = ({mtn, handleClick}) => {
         <>
     
         <Dropdown className="mtn-dropdown">
-            <Dropdown.Toggle variant="success" id="dropdown-basic" className="mtn-dropdown">
+            <Dropdown.Toggle style={{borderColor: "rgba(70, 162, 159, 1)"}} variant="outline-info" id="dropdown-basic" className="mtn-dropdown">
                     Mountains
             </Dropdown.Toggle>
             <Dropdown.Menu className="mtn-dropdown-list" id="mtn-list">

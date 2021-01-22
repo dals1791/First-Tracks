@@ -6,7 +6,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 const ToggleSwitch = ({ data, handleFavorites, favorites }) => {
   const iconColor = favorites.some((mtn) => mtn.id === data.id)
     ? "red"
-    : "grey";
+    : "rgba(199, 202, 205, 1)";
 
   return (
     <FontAwesomeIcon

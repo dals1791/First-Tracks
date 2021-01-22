@@ -1,41 +1,55 @@
-
 /* Colors
-rgba(11, 13, 16, 1)
-rgba(31, 40, 51, .8) 
-rgba(199, 202, 205, 1)
-rgba(102, 252, 241, 1)
-rgba(70, 162, 159, 1)
+black rgba(11, 13, 16, 1)
+navy: rgba(31, 40, 51, .8) 
+grey: rgba(199, 202, 205, 1)
+cyan: rgba(102, 252, 241, 1)
+teal: rgba(70, 162, 159, 1)
 */
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');@import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Open+Sans&display=swap');
 html {
-  
   height: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  
+ 
 }
 .App {
   max-width: 1024px;
+  margin: 0 auto;
   height: 100%;
   text-align: center;
- 
-  color: white;
+  color: rgba(199, 202, 205, 1);
 }
 .title {
+  font-family: 'Electrolize', sans-serif;
   text-align: right;
   color: rgba(102, 252, 241, 1);
 }
-.Link {
+.title:hover{
   text-decoration: none;
-  color: black;
+  color: rgba(70, 162, 159, 1);
+}
+a.Link {
+  text-decoration: none;
+  margin-bottom: 0;
+  color: rgba(199, 202, 205, 1);
+}
+a.Link:hover{
+  text-decoration: none;
+  color:rgba(102, 252, 241, 1);
 }
 .nav-bar {
   display: flex;
   justify-content: space-around;
+  align-items: baseline;
   font-size: 24px;
   border-bottom: 2px solid rgba(70, 162, 159, 1);
   /* background-image: radial-gradient(farthest-corner at 0px 0px, rgba(31, 6, 172, 1), 0.25%, rgba(33, 34, 43, 1)); */
 }
 .nav-links {
-  background-color: white;
-  border: 1px solid;
+  background-color: rgba(31, 40, 51, 1);
+  
+  border: 1px solid  rgba(70, 162, 159, 1);;
   border-radius: 10px;
   font-size: 24px;
   padding: 0.25rem;
@@ -51,7 +65,6 @@ html {
 .home {
   justify-content: space-around;
   flex-wrap: wrap;
-  
 }
 .home-text {
   margin: 4rem auto;
@@ -59,31 +72,54 @@ html {
   text-align: center;
   color: rgba(199, 202, 205, 1);
 }
-.home-card {
+.home .home-card {
   margin: 0.5rem 0;
+  text-align: left;
+  border-color: rgba(70, 162, 159, 1);
+}
+.title-bar {
+  display: flex;
+  justify-content: space-between;
 }
 
 .mtn-dropdown {
   text-align: center;
   margin: 5px 0;
-  background-color: blue;
+
   border-radius: 10px;
 }
-button.btn-success.mtn-dropdown {
-  background-color: red;
+button.btn-outline-info.mtn-dropdown {
+  margin: 0.5rem 0;
+
+  background-color: transparent;
 }
-.mtn-dropdown.show button.btn-sucess {
-  background-color: purple;
-}
-div.dropdown-menu.mtn.dropdown-list.show {
-  background-color: red;
+.mtn-dropdown.show button.btn-outline-info {
+  background-color: rgba(70, 162, 159, 1);
 }
 #mtn-list {
   /* transform: translate(60px, 45px, 0px); */
+  background-color: rgba(31, 40, 51, 1) ;
+  border-color: rgba(70, 162, 159, 1);
+  color: rgba(199, 202, 205, 1);
   text-align: left;
+}
+a.dropdown-item{
+  color: rgba(199, 202, 205, 1);
+}
+a.dropdown-item:hover{
+  color: rgba(31, 40, 51, 1);
 }
 .card-img-top {
   object-fit: cover;
+  background-color: rgba(199, 202, 205, 1);
+}
+.card .card-body {
+  padding: 0.75rem;
+  background-color: rgba(31, 40, 51, 1);
+}
+.single-mtn .card-shape {
+  background-color: rgba(31, 40, 51, 1);
+  border: 1px solid rgba(70, 162, 159, 1);
 }
 .single-mtn {
   width: 50%;

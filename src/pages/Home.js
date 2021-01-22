@@ -13,18 +13,20 @@ const Home = ({ favorites, handleFavorites, storageFavorites }) => {
   const myMtns = favorites?.map((ele) => {
     return (
       <Card key={ele.id} style={{ width: "18rem" }} className="home-card">
-        <Card.Img variant="top" src={ele.logo} />
+        {/* <Card.Img variant="top" src={ele.logo} /> */}
         <Card.Body>
-          <Card.Title>{ele.name}</Card.Title>
-          <Card.Text>
-            <Weather lat={ele.lat} long={ele.long} />
-          </Card.Text>
-        </Card.Body>
-        <ToggleSwitch
+          <div className="title-bar"><Card.Title>{ele.name}</Card.Title>
+          <ToggleSwitch
           data={ele}
           handleFavorites={handleFavorites}
           favorites={favorites}
-        />
+        /></div>
+          <Card.Text>
+            <Weather lat={ele.lat} long={ele.long} />
+          </Card.Text>
+          
+        </Card.Body>
+        
       </Card>
     );
   });
