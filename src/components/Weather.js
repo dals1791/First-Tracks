@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 // FontAwesome Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
-import { faSnowflake } from "@fortawesome/free-solid-svg-icons";
 
 const Weather = (props) => {
   const apiKey = "bbb59f00c92b004f07e523eaa0647cf7";
