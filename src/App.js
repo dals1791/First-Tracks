@@ -39,7 +39,11 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/">
-            <Home favorites={favorites} storageFavorites={setFavorites} handleFavorites={handleFavorites} />
+            <Home
+              favorites={favorites}
+              storageFavorites={setFavorites}
+              handleFavorites={handleFavorites}
+            />
           </Route>
           <Route path="/Mtns">
             <Mtns favorites={favorites} handleFavorites={handleFavorites} />
