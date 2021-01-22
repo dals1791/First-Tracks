@@ -24,7 +24,6 @@ function App() {
       addFavorites.splice(index, 1);
       setFavorites(addFavorites);
     } else {
-      // iconColor = "red"
       addFavorites.push(data);
       setFavorites(addFavorites);
     }

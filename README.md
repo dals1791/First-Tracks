@@ -182,11 +182,11 @@ API Response:
       |Add Router|H|0.5Hr|0.5hr|COMPLETE|
       |Create mountainData.JS|M|0.5hr|0.5hr|COMPLETE|
       |Call API and and render info to Single Mountain|H|5hr|4hr|COMPLETE|
-      |Add button, lift state, and render to Home for Single Mountain|H|5hr|1.5hr|IN PROGRESS|
-      |Styling|M|10hrs|TBD|
+      |Add button, lift state, and render to Home for Single Mountain|H|5hr|10hr|COMPLETE|
+      |Styling|M|10hrs|1hr|IN PROGRESS|
       |bug fixes/final polish|M|3hr|TBD|
       |Deploy to Netlify|H|2hr|0.5hr|COMPLETE|
-      |Total Time||27hrs|7.5hrs|
+      |Total Time||27hrs|17hrs|
 
 - ### Post-MVP
     - |Task|Priority|Estimated Time|Actual Time|
@@ -258,4 +258,36 @@ API Response:
         
          homeMtns ? loaded(): loading()
       )
+5. Saving mountains to a favorites array and keeping track of state
+  - resolution: I had too many states. Only need one favorite state that add removes via splice, push, and splice. slie creates a new array from the state, push add the object data when clicked, splice removes the object data from the array and then the state is set to the sliced array after adding or removing the data. 
+    ```
+    const handleFavorites = (data) => {
+      const addFavorites = favorites.slice();
+      const idMatch = favorites.some((mtn) => mtn.id === data.id);
+      if (idMatch === true) {
+        const index = addFavorites.indexOf(data);
+        addFavorites.splice(index, 1);
+        setFavorites(addFavorites);
+      } else {
+        addFavorites.push(data);
+        setFavorites(addFavorites);
+      }
+    };
+
+6. Local Storage to save favorites on home page after closing the app. 
+  - localStorage.setItem("name to call data being stored", data to store)
+    - when using local storage, the data being stored needs to be in a string. Use JSON.stringfy(data to store). Placed into a useEffect to store data on first render. 
+    ```
+    useEffect(() => {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+    }, [favorites]);
+
+  - localStorage.getItem("name to call data being stored").
+    - getItem is placed where the data is required. Needs to be parsed. use JSON.parse(localStorage.getItem("name to call data being stored")).
+    - for First-Tracks the getItem is on Home.js page. It is set into a useEffect so it renders onthe first render. additionally it was set to update the favorites state so that it renders right away. 
+    ```
+    useEffect(() => {
+    let localFavorites = JSON.parse(localStorage.getItem("favorites"));
+    storageFavorites(localFavorites);
+    }, []);
 
