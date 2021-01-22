@@ -152,7 +152,7 @@ a.mtn-url{
   border: 1px solid rgba(70, 162, 159, 1);
 }
 div.card-title{
-  width: 65%;
+  font-size: 1rem;
   font-family: 'Open Sans', sans-serif;
 }
 .single-mtn.container {
