@@ -57,21 +57,25 @@ a.Link:hover {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  font-family: 'Open Sans', sans-serif;
 }
 .home {
   justify-content: space-around;
   flex-wrap: wrap;
+  font-family: 'Open Sans', sans-serif;
 }
 .home-text {
   margin: 4rem auto;
   font-size: 26px;
   text-align: center;
   color: rgba(199, 202, 205, 1);
+  font-family: 'Open Sans', sans-serif;
 }
 .home .home-card {
   margin: 0.5rem 0;
   text-align: left;
   border-color: rgba(70, 162, 159, 1);
+  font-family: 'Open Sans', sans-serif;
 }
 .title-bar {
   display: flex;
@@ -95,12 +99,16 @@ button.btn-outline-info.mtn-dropdown {
   border-color: rgba(70, 162, 159, 1);
   color: rgba(199, 202, 205, 1);
   text-align: left;
+  font-family: 'Open Sans', sans-serif;
 }
 a.dropdown-item {
   color: rgba(199, 202, 205, 1);
 }
 a.dropdown-item:hover {
   color: rgba(31, 40, 51, 1);
+}
+.mountain-list.container{
+  text-align: center;
 }
 .card-img-top {
   object-fit: cover;
@@ -109,10 +117,16 @@ a.dropdown-item:hover {
 .card .card-body {
   padding: 0.75rem;
   background-color: rgba(31, 40, 51, 1);
+  font-family: 'Open Sans', sans-serif;
 }
 .single-mtn .card-shape {
+  display:flex;
+  
   background-color: rgba(31, 40, 51, 1);
   border: 1px solid rgba(70, 162, 159, 1);
+}
+div.card-title{
+  font-family: 'Open Sans', sans-serif;
 }
 .single-mtn {
   width: 50%;
@@ -126,19 +140,23 @@ a.dropdown-item:hover {
 }
 .about {
   color: rgba(199, 202, 205, 1);
+  font-family: 'Open Sans', sans-serif;
 }
 .about-list {
   list-style-type: none;
+  
 }
 .contact {
   /* display: flex; */
   text-align: left;
   margin: 1rem 0;
   border: 1px solid rgba(70, 162, 159, 1);
+  
 }
 .about-list li a {
   color: rgba(102, 252, 241, 1);
   padding-left: 0;
+  
 }
 .api{
   color:rgba(102, 252, 241, 1);
