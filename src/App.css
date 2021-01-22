@@ -126,8 +126,9 @@ a.dropdown-item:hover {
   color: rgba(31, 40, 51, 1);
 }
 .mountain-list.container{
-  text-align: center;
+  /* text-align: center; */
 }
+
 .card-img-top {
   object-fit: auto;
   background-color: white;
