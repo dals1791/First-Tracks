@@ -16,7 +16,7 @@ const SingleMtn = ({ data, handleFavorites, favorites, iconColor }) => {
             <Card.Title>{data.name}</Card.Title>
             <Card.Text>
               <Weather lat={data.lat} long={data.long} />
-              <a className="mtn-url" href={data.url}>{data.url}</a>
+              <a className="mtn-url" target="_blank" href={data.url}>{data.url}</a>
             </Card.Text>
             <div className="toggle-icon"> <ToggleSwitch
             data={data}
