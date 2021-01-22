@@ -81,7 +81,7 @@ a.Link:hover {
 }
 .home-name{
   display:flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
 .home-report{
   margin-left: .5rem;
@@ -126,11 +126,14 @@ a.dropdown-item:hover {
   color: rgba(31, 40, 51, 1);
 }
 .mountain-list.container{
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card-img-top {
   object-fit: auto;
+  
   background-color: white;
 }
 
@@ -144,18 +147,18 @@ a.mtn-url{
   font-family: 'Open Sans', sans-serif;
 }
 .single-mtn .card-shape {
-  display:flex;
-  
+  margin: 0 auto;
   background-color: rgba(31, 40, 51, 1);
   border: 1px solid rgba(70, 162, 159, 1);
 }
 div.card-title{
+  width: 65%;
   font-family: 'Open Sans', sans-serif;
 }
-.single-mtn {
-  width: 50%;
+.single-mtn.container {
+  display: flex;
+  text-align: center;
 }
-
 .my-mtn {
   width: 50%;
 }
@@ -171,7 +174,6 @@ div.card-title{
   
 }
 .contact {
-  /* display: flex; */
   text-align: left;
   margin: 1rem 0;
   border: 1px solid rgba(70, 162, 159, 1);
@@ -191,6 +193,9 @@ div.card-title{
 
 /* Media Queries */
 @media only screen and (min-width: 425px) {
+  div.card-title{
+  width: 100%;
+}
 }
 @media only screen and (min-width: 765px) {
 }

@@ -14,13 +14,14 @@ const Home = ({ favorites, handleFavorites, storageFavorites }) => {
   const myMtns = favorites?.map((ele) => {
     return (
       <Card key={ele.id} style={{ width: "auto" }} className="home-card">
-        {/* <Card.Img variant="top" src={ele.logo} /> */}
+        
         <Card.Body>
           <div className="title-bar">
           <div className="home-name">
             <Card.Title>{ele.name} </Card.Title>
-          <a className="home-report" target="_blank" href={ele.report}><FontAwesomeIcon icon={faMountain}/></a>
-          </div>
+          <a className="home-report" target="_blank" href={ele.report}>
+            <FontAwesomeIcon icon={faMountain}/></a>
+            </div>
           
           <ToggleSwitch
           data={ele}
