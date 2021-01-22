@@ -10,16 +10,17 @@ const About = () => {
       <p>
         Mountain Tracker is an app that allows you to get updates on weather and
         other information for your go-to ski & snowboard resorts all in one
-        place.
-      </p>
-      The app uses a weather data API created by https://openweathermap.org/api/
+        place.</p>
+      <p>The app uses a weather data API created by 
+          <a className="api" href="https://openweathermap.org/api/"> https://openweathermap.org/api/</a>
+          </p>
       <Container className="contact">
           <p>Feel free to contact me @:</p>
       <ul className="about-list">
           <li>daly.se91@gmail.com</li>
-          <li><a href="https://github.com/dals1791">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/seandaly0593/">LinkedIn</a></li>
-          <li><a href="https://dals1791.github.io/">And check my protfolio out</a></li>
+          <li><a className="contact-link" href="https://github.com/dals1791">GitHub</a></li>
+          <li><a className="contact-link" href="https://www.linkedin.com/in/seandaly0593/">LinkedIn</a></li>
+          <li><a className="contact-link" href="https://dals1791.github.io/">And check my protfolio out</a></li>
       </ul>
       </Container>
     </Container>
