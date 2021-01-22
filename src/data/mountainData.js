@@ -32,7 +32,7 @@ const mtnData = [
         address: "60 Loon Mountain Rd",
         lat: "44.0563",
         long: "-71.6336",
-        url:"loonmtn.com" ,
+        url:"https://loonmtn.com" ,
         logo: "https://images.ctfassets.net/ycpblqmln66n/7IVadlZYY04Kwg2ykqiM44/f4e8793777ea0631535093927c1064ce/loon_2x.png",
         phone: "800-229-5666",
     },
