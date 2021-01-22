@@ -1,14 +1,12 @@
 import React, { useEffect } from "react";
+// components
 import Weather from "../components/Weather";
 import ToggleSwitch from "../components/toggleSwitch";
 // React-Bootstrap Components ---------------------------
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
 
-
 const Home = ({ favorites, handleFavorites, storageFavorites }) => {
-  console.log(favorites);
-  //    const[state, setState]=useState(null)
   const myMtns = favorites?.map((ele) => {
     return (
       <Card key={ele.id} style={{ width: "18rem" }} className="home-card">
@@ -48,9 +46,6 @@ const Home = ({ favorites, handleFavorites, storageFavorites }) => {
     );
   };
 
-  return (
-    // <Container className="home">{myMtns} </Container>
-    favorites.length ? loaded() : loading()
-  );
+  return favorites.length ? loaded() : loading();
 };
 export default Home;

@@ -7,17 +7,14 @@ import Container from "react-bootstrap/Container";
 
 const Mtns = (props) => {
   const mountains = mtnData?.map((ele) => {
-    // console.log("This is name", ele.name)
     return <AllMtn {...ele} />;
   });
-  // console.log("this is mountains", mountains)
 
   const [singleMtn, setSingleMtn] = useState();
 
   const handleDisplayMtn = (obj) => {
     setSingleMtn(obj);
   };
-  console.log("This is the singleMtn State", singleMtn);
   useEffect(() => handleDisplayMtn(), []);
   return (
     <Container className="mountain-list">

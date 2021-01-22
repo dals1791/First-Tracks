@@ -28,7 +28,7 @@ function App() {
       setFavorites(addFavorites);
     }
   };
-  console.log("This is my favorites", favorites);
+
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);

@@ -40,15 +40,6 @@ text-align: right;
   margin: 0.5rem 0;
 }
 
-/* .mountain-list{
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-  
-
-} */
-
 .mtn-dropdown{
   text-align: center;
   margin: 5px 0;
@@ -74,15 +65,16 @@ object-fit: cover;
 
 }
 .single-mtn{
-  /* border: 1px solid black; */
+  
   width: 50%;
 }
-.fa-heart.fav-icon{
-  
-}
+
 .my-mtn{
   border: 1px solid black;
   width: 50%;
+}
+.weather{
+  font-size: 20px;
 }
 /* Media Queries */
 @media only screen and (min-width: 425px){
