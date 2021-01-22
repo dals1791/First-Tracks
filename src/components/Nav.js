@@ -5,6 +5,7 @@ import {Link} from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
+import Navbar from "react-bootstrap/Navbar"
 // import Font Awesome Icons
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faSnowflake } from '@fortawesome/free-solid-svg-icons'
@@ -21,7 +22,7 @@ const Nav = () => {
 
     return(
         <>
-        <Container r>
+        <Container >
             <Row className="nav-bar">
                 <Col xs={2}>
                 <FontAwesomeIcon 

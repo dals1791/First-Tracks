@@ -1,14 +1,16 @@
 // import React
 import React from "react"
 import {Link} from "react-router-dom"
+// import React-Bootsrrap
+import Container from 'react-bootstrap/Container';
 
 const NavLinks = (props) => {
 return(
-    <div className="nav-links"> 
+    <Container className="nav-links"> 
         <Link  onClick={()=>{props.toggle()}} className="Link" to="/">Home</Link>
         <Link  onClick={()=>{props.toggle()}} className="Link"to="/Mtns">Mountains</Link>
         <Link  onClick={()=>{props.toggle()}} className="Link" to="/About">About</Link>
-    </div>
+    </Container>
 )
 
 }
