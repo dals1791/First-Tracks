@@ -2,7 +2,7 @@ const mtnData = [
     {
         id: "1",
         name: "Wachusett Mountain" ,
-        state: "Massachusetts",
+        state: "MA",
         city: "Princeton",
         address: "499 Mountain Rd",
         lat: "42.4889793",
@@ -10,12 +10,13 @@ const mtnData = [
         url:"https://www.wachusett.com/" ,
         logo: "https://www.wachusett.com/App_Themes/Wachusett2018/img/logo.png",
         phone: "978-464-2300",
+        report: "https://www.wachusett.com/The-Mountain/About-Wachusett/Snow-Report.aspx"
 
     },
     {
         id: "2",
         name: "Sunday River",
-        state: "Maine",
+        state: "ME",
         city: "Newry",
         address: "15 South Ridge Road",
         lat: "44.4734",
@@ -23,11 +24,12 @@ const mtnData = [
         url:"https://www.sundayriver.com/" ,
         logo: "https://images.ctfassets.net/ycpblqmln66n/rbT9YvvMasmggaK88Ams8/b412adf76645b2206ae7fe51ab1e0e08/sunday-river_2x.png",
         phone: "800-543-2754",
+        report: "https://www.sundayriver.com/mountain-report"
     },
     {
         id: "3",
         name: "Loon Mountain",
-        state: "New Hampshire",
+        state: "NH",
         city: "Lincoln",
         address: "60 Loon Mountain Rd",
         lat: "44.0563",
@@ -35,11 +37,12 @@ const mtnData = [
         url:"https://loonmtn.com" ,
         logo: "https://images.ctfassets.net/ycpblqmln66n/7IVadlZYY04Kwg2ykqiM44/f4e8793777ea0631535093927c1064ce/loon_2x.png",
         phone: "800-229-5666",
+        report: "https://www.loonmtn.com/conditions"
     },
     {
         id: "4",
         name: "Sugarloaf",
-        state: "Maine",
+        state: "ME",
         city: "Carrabassett Valley",
         address: "5092 Sugarloaf Access Rd.",
         lat: "45.0314",
@@ -47,11 +50,12 @@ const mtnData = [
         url:"https://www.sugarloaf.com/" ,
         logo: "https://www.sugarloaf.com/images/Sugarloaf/logos/SUG_Logo_name_included.ico.ico",
         phone: "800-843-5623",
+        report: "https://www.sugarloaf.com/mountain-report"
     },
     {
         id: "5",
         name: "Jay Peak",
-        state: "Vermont",
+        state: "VT",
         city: "Jay",
         address: "830 Jay Peak Road",
         lat: "44.9649",
@@ -59,11 +63,12 @@ const mtnData = [
         url:"https://jaypeakresort.com/" ,
         logo: "https://www.indyskipass.com/wp-content/uploads/2020/10/jay-peak-logo.png",
         phone: "802-988-2611",
+        report: "https://jaypeakresort.com/skiing-riding/snow-report-maps/snow-report"
     },
     {
         id: "6",
         name: "Killington",
-        state: "Vermont",
+        state: "VT",
         city: "Killington",
         address: "4763 Killington Road",
         lat: "43.6263",
@@ -71,11 +76,12 @@ const mtnData = [
         url:"https://www.killington.com/" ,
         logo: "https://images.ctfassets.net/ycpblqmln66n/3ow1ctAFaoEyISeYqYMCuU/6096b22e4ab0f775390c2de818712bbd/killington_2x.png",
         phone: "800-734-9435",
+        report: "https://www.killington.com/the-mountain/conditions-weather/current-conditions-weather"
     },
     {
         id: "7",
         name: "Snowbird",
-        state: "Utah",
+        state: "UT",
         city: "Snowbird",
         address: "9385 S. Snowbird Center Dr",
         lat: "40.5818948",
@@ -83,11 +89,12 @@ const mtnData = [
         url:"https://www.snowbird.com/" ,
         logo: "https://snowbird.roundshot.co/logos/5d771845ce0d40.44731474/fec0fee64ee7c1afba0e765757b6b0c2cfb1a7c1.png",
         phone: "800-232-9542",
+        report: "https://www.snowbird.com/mountain-report/"
     },
     {
         id: "8",
         name: "Copper Mountain",
-        state: "Colorado",
+        state: "CO",
         city: "Copper Mountain",
         address: "509 Copper Road",
         lat: "39.5022",
@@ -95,11 +102,12 @@ const mtnData = [
         url:"https://www.coppercolorado.com/" ,
         logo: "https://images.ctfassets.net/ycpblqmln66n/k96kdHutq0IoQwowkKc2E/fe5f0b5eba3f0d457cd7d9b9a36c887f/copper-mountain_2x.png",
         phone: "970-968-2318",
+        report: "https://www.coppercolorado.com/the-mountain/conditions-weather/snow-report"
     },
     {
         id: "9",
         name: "Winter Park Resort",
-        state: "Colorado",
+        state: "CO",
         city: "Winter Park",
         address: "85 Parsenn Road",
         lat: "39.8868",
@@ -107,11 +115,12 @@ const mtnData = [
         url:"https://www.winterparkresort.com/" ,
         logo: "https://www.winterparkresort.com/-/media/winter-park/logos/winter-park-logos/Winter-Park-Resort-16x9-white.jpg",
         phone: "970-726-5514",
+        report: "https://www.winterparkresort.com/the-mountain/mountain-report"
     },
     {
         id: "10",
         name: "Big Sky",
-        state: "Montana",
+        state: "MT",
         city: "Big Sky",
         address: "50 Big Sky Resort Road",
         lat: "45.2857",
@@ -119,11 +128,12 @@ const mtnData = [
         url:"https://bigskyresort.com/" ,
         logo: "https://bigskyresort.com/images/Big%20Sky/Logos/Logo_Black.png",
         phone: "800-548-4486",
+        report: "https://bigskyresort.com/snow-report"
     },
     {
         id: "11",
         name: "Jackson Hole",
-        state: "Wyoming",
+        state: "WY",
         city: "Teton Village",
         address: "3395 Cody Ln",
         lat: "43.5875",
@@ -131,11 +141,12 @@ const mtnData = [
         url:"https://www.jacksonhole.com/" ,
         logo: "https://images.ctfassets.net/ycpblqmln66n/29shm2tLD2eqoCwm2couwu/3227f72df89da0af6ba0028e17a525ff/jackson-hole_2x.png",
         phone: "307-733-2292",
+        report: "https://www.jacksonhole.com/weather-snow-report.html"
     },
     {
         id: "12",
         name: "Heavenly",
-        state: "California",
+        state: "CA",
         city: "South Lake Tahoe",
         address: "4080 Lake Tahoe Blvd",
         lat: "38.9353",
@@ -143,6 +154,7 @@ const mtnData = [
         url:"https://www.skiheavenly.com/" ,
         logo: "https://www.enjoytahoe.com/sites/nejt/files/styles/600x400/public/paragraphs/images/callouts/center/Heavenly.jpg",
         phone: "775-586-7000",
+        report: "https://www.skiheavenly.com/the-mountain/mountain-conditions/snow-and-weather-report.aspx"
     },
 
 ]

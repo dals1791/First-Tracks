@@ -24,7 +24,7 @@ const Weather = (props) => {
     const description = ele.current.weather[0].description;
     const moonIcon = () => {
       if (ele.current.weather[0].icon === "01n") {
-        return <FontAwesomeIcon icon={faMoon} />;
+        return <FontAwesomeIcon icon={faMoon} alt={description}/>;
       } else {
         return (
           <img

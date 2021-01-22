@@ -79,6 +79,16 @@ a.Link:hover {
   color: rgba(199, 202, 205, 1);
   font-family: 'Open Sans', sans-serif;
 }
+.home-name{
+  display:flex;
+  justify-content: space-around;
+}
+.home-report{
+  margin-left: .5rem;
+}
+.home-report:hover{
+  color: orange;
+}
 .home .home-card {
   margin: 0.5rem 0;
   text-align: left;
@@ -119,10 +129,12 @@ a.dropdown-item:hover {
   text-align: center;
 }
 .card-img-top {
-  object-fit: cover;
-  background-color: rgba(199, 202, 205, 1);
+  object-fit: auto;
+  background-color: white;
 }
-.mtn-url{
+
+a.mtn-url{
+  font-size: .75rem;
   color: rgba(102, 252, 241, 1);
 }
 .card .card-body {

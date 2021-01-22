@@ -13,7 +13,8 @@ const SingleMtn = ({ data, handleFavorites, favorites, iconColor }) => {
         <Card className="card-shape" style={{ width: "16rem" }}>
           <Card.Img variant="top" src={data.logo} />
           <Card.Body>
-            <Card.Title>{data.name}</Card.Title>
+            <Card.Title>{data.name} </Card.Title>
+            ({data.city}, {data.state})
             <Card.Text>
               <Weather lat={data.lat} long={data.long} />
               <a className="mtn-url" target="_blank" href={data.url}>{data.url}</a>

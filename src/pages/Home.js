@@ -8,6 +8,7 @@ import Card from "react-bootstrap/Card";
 // FontAwesome Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faMountain } from "@fortawesome/free-solid-svg-icons";
 
 const Home = ({ favorites, handleFavorites, storageFavorites }) => {
   const myMtns = favorites?.map((ele) => {
@@ -15,7 +16,12 @@ const Home = ({ favorites, handleFavorites, storageFavorites }) => {
       <Card key={ele.id} style={{ width: "auto" }} className="home-card">
         {/* <Card.Img variant="top" src={ele.logo} /> */}
         <Card.Body>
-          <div className="title-bar"><Card.Title>{ele.name}</Card.Title>
+          <div className="title-bar">
+          <div className="home-name">
+            <Card.Title>{ele.name} </Card.Title>
+          <a className="home-report" target="_blank" href={ele.report}><FontAwesomeIcon icon={faMountain}/></a>
+          </div>
+          
           <ToggleSwitch
           data={ele}
           handleFavorites={handleFavorites}
