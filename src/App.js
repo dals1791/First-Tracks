@@ -34,7 +34,7 @@ function App() {
   }, [favorites]);
   return (
     <>
-      <div>
+      <div className="App">
         <Nav />
         <Switch>
           <Route exact path="/">

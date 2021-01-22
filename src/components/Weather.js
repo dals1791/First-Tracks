@@ -20,7 +20,7 @@ const Weather = (props) => {
   useEffect(() => getWeather(lat, long), [lat, long]);
 
   const WeatherInfo = weather?.map((ele, index) => {
-    let icon = null;
+    let icon = ele.current.weather[0].icon;
     const description = ele.current.weather[0].description;
     const moonIcon = () => {
       if (ele.current.weather[0].icon == "01n") {

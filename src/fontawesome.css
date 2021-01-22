@@ -1,7 +1,5 @@
 .hamburger-icon{
-    color: cyan;
-    background-color: black;
-    border: 1px solid;
+    color: rgba(102, 252, 241, 1);
     border-radius: 5px;
     padding: .25rem;
     margin: .25rem 0;
@@ -10,8 +8,10 @@
     /* color: grey; */
     align-self: flex-end;
     margin: 0px 10px 5px 0;
-
-    
+}
+#homeheart{
+    color: red;
+    margin: 0 .5rem;
 }
 .bolt{
     color: orange;

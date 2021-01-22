@@ -5,6 +5,9 @@ import ToggleSwitch from "../components/toggleSwitch";
 // React-Bootstrap Components ---------------------------
 import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
+// FontAwesome Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const Home = ({ favorites, handleFavorites, storageFavorites }) => {
   const myMtns = favorites?.map((ele) => {
@@ -40,8 +43,10 @@ const Home = ({ favorites, handleFavorites, storageFavorites }) => {
   };
   const loading = () => {
     return (
-      <Container>
-        <h2>Follow your mountains on the mountains page</h2>
+      <Container className="home-text">
+        <div>Go to the mountains page and hit the     
+        <FontAwesomeIcon id="homeheart"icon={faHeart}/> 
+        to follow your Go-Tos! </div>
       </Container>
     );
   };
