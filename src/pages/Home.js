@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Weather from "../components/Weather"
 import ToggleSwitch from "../components/toggleSwitch"
 // React-Bootstrap Components ---------------------------
@@ -9,7 +9,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faHeart } from '@fortawesome/free-solid-svg-icons'
 
 
-const Home = ({favorites, handleFavorites}) => {
+const Home = ({favorites, handleFavorites, storageFavorites}) => {
     
     console.log(favorites)
 //    const[state, setState]=useState(null)
@@ -27,7 +27,11 @@ const myMtns = favorites?.map((ele)=>{
             </Card>
         )
    }) 
-
+   
+   
+   useEffect(()=> {
+    let localFavorites= JSON.parse(localStorage.getItem("favorites")); storageFavorites(localFavorites)}, [])
+  
 const loaded=()=>{  
    return (
        <>

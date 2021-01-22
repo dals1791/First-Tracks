@@ -8,14 +8,6 @@ const ToggleSwitch =({data, handleFavorites, favorites})=>{
     console.log("This is favorites in toggle", favorites)
 const iconColor = favorites.some((mtn)=>mtn.id===data.id) ? "red" : "grey"
 
-// const [toggle, setToggle]=useState(false)
-
-// const handleClick =()=>{
-//     setToggle(toggle =>!toggle)
-  
-//     console.log("button toggle state", toggle)
-// }
-// useEffect(()=>handleClick(), [])
 return (
 <FontAwesomeIcon 
 style={{color: iconColor}}
