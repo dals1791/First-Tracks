@@ -183,10 +183,10 @@ API Response:
       |Create mountainData.JS|M|0.5hr|0.5hr|COMPLETE|
       |Call API and and render info to Single Mountain|H|5hr|4hr|COMPLETE|
       |Add button, lift state, and render to Home for Single Mountain|H|5hr|10hr|COMPLETE|
-      |Styling|M|10hrs|1hr|IN PROGRESS|
-      |bug fixes/final polish|M|3hr|TBD|
+      |Styling|M|10hrs|8hr|COMPLETE|
+      |bug fixes/final polish|M|3hr|1hr|COMPLETE|
       |Deploy to Netlify|H|2hr|0.5hr|COMPLETE|
-      |Total Time||27hrs|17hrs|
+      |Total Time||27hrs|25hrs|COMPLETE|
 
 - ### Post-MVP
     - |Task|Priority|Estimated Time|Actual Time|
@@ -195,9 +195,9 @@ API Response:
       |Get Twitter Feed for mountain updates|L|10hrs|TBD|
       |Get drive data|L|10hrs|TBD|
       |Add geolocate to US map for pin|M|5hrs|TBD|
-      |Update mountain.data with more mountains|H|3hrs|TBD|
+      |Update mountain.data with more mountains|H|3hrs|2hrs|
       |Add Notes Section to single mountains|M|3hrs|TBD|
-      |Total Time||34hrs|TBD|
+      |Total Time||34hrs|2hrs|
 
 ## Additional Libraries
 -  React Bootstrap
